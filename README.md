@@ -15,9 +15,8 @@ Or build the uberjar for better performance:
 
 ```
 $ lein uberjar
-$ java -jar ./target/concordance-0.1.0-standalone.jar --frequency sampleFile.txt
+$ java -jar ./target/concordance-standalone.jar --frequency sampleFile.txt
 ```
-
 
 
 ## Library Quickstart

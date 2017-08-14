@@ -1,8 +1,7 @@
 (ns concordance.main
+  (:gen-class)
   (:require [concordance.core :as c]
             [clojure.java.io :as jio]))
-
-(set! *warn-on-reflection* true)
 
 (let [valid-flags #{"--frequency"}]
   (defn parse-flags
@@ -34,7 +33,7 @@
   "Run the concordance.jj
   TODO: When dependencies are allowed, replace with proper cli arg handler."
   [& args]
-  (print
+  (println
     (if-let [file-path (naive-file-match args)]
       (try
         (let [flags  (parse-flags args)
